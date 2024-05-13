@@ -19,17 +19,30 @@ import FadingSeparator from './components/FadingSeperator';
 import CenteredTitle from './components/CenteredTitle';
 import ScientificParagraph from './components/ScientificParagraph'
 
+// const authors = [
+//   { name: "Hossein Mirzaei", index: "1", span: { base: 1, md: 1, lg: 1 } },
+//   { name: "Mohammad Jafari", index: "1", span: { base: 1, md: 2, lg: 1 } },
+//   { name: "Hamidreza Dehbashi", index: "1", span: { base: 1, md: 1, lg: 1 } },
+//   { name: "Ali Anasari", index: "1", span: { base: 1, md: 1, lg: 1 } },
+//   { name: "Sepehr Ghobadi", index: "1", span: { base: 1, md: 1, lg: 1 } },
+//   { name: "Masoud Hadi", index: "2", span: { base: 1, md: 2, lg: 1 } },
+//   { name: "Arshia Soltani", index: "1", span: { base: 1, md: 1, lg: 1 } },
+//   { name: "Mohammad Azizmalayeri", index: "1", span: { base: 1, md: 1, lg: 1 } },
+//   { name: "Mahdieh Soleymani Baghshah", index: "1", span: { base: 2, md: 2, lg: 2 } },
+//   { name: "Mohammad Hossein Rohban", index: "1", span: { base: 2, md: 2, lg: 2 } }
+// ];
+
 const authors = [
-  { name: "Hossein Mirzaei", index: "1", span: { base: 1, md: 1, lg: 1 } },
-  { name: "Mohammad Jafari", index: "1", span: { base: 1, md: 2, lg: 1 } },
-  { name: "Hamidreza Dehbashi", index: "1", span: { base: 1, md: 1, lg: 1 } },
-  { name: "Ali Anasari", index: "1", span: { base: 1, md: 1, lg: 1 } },
-  { name: "Sepehr Ghobadi", index: "1", span: { base: 1, md: 1, lg: 1 } },
-  { name: "Masoud Hadi", index: "2", span: { base: 1, md: 2, lg: 1 } },
-  { name: "Arshia Soltani", index: "1", span: { base: 1, md: 1, lg: 1 } },
-  { name: "Mohammad Azizmalayeri", index: "1", span: { base: 1, md: 1, lg: 1 } },
-  { name: "Mahdieh Soleymani Baghshah", index: "1", span: { base: 2, md: 2, lg: 2 } },
-  { name: "Mohammad Hossein Rohban", index: "1", span: { base: 2, md: 2, lg: 2 } }
+  { name: "H. Mirzaei", index: "1", span: { base: 1, md: 1, lg: 1 } },
+  { name: "M. Jafari", index: "1", span: { base: 1, md: 1, lg: 1 } },
+  { name: "H. Dehbashi", index: "1", span: { base: 1, md: 1, lg: 1 } },
+  { name: "A. Anasari", index: "1", span: { base: 1, md: 1, lg: 1 } },
+  { name: "S. Ghobadi", index: "1", span: { base: 1, md: 1, lg: 1 } },
+  { name: "M. Hadi", index: "2", span: { base: 1, md: 1, lg: 1 } },
+  { name: "A. Soltani", index: "1", span: { base: 1, md: 1, lg: 1 } },
+  { name: "M. Azizmalayeri", index: "1", span: { base: 1, md: 1, lg: 1 } },
+  { name: "M. Soleymani", index: "1", span: { base: 2, md: 2, lg: 2 } },
+  { name: "MH. Rohban", index: "1", span: { base: 2, md: 2, lg: 2 } }
 ];
 
 const affiliations = [
@@ -39,7 +52,7 @@ const affiliations = [
 const App: React.FC = () => {
   return (
     <Flex mt={10} justify="center" minHeight="100vh" width="100%"> {/* Ensures that the content is centered in the viewport */}
-      <Container maxW="70%" bgColor="white">
+      <Container maxW={{base:"95%", md:"80%", lg:"70%"}} bgColor="white">
         <VStack spacing={4} alignItems="center">
           <Heading as="h1" fontFamily="Times New Roman" size="xl" textAlign="center">
             RODEO: Robust Outlier Detection via Exposing Adaptive Outliers
@@ -124,7 +137,7 @@ const App: React.FC = () => {
           <Image
               rounded={'lg'}
               // height={'100%'}  // Set the height to be 100% of the inner Flex
-              width={'40%'}   // Set the width to be 100% of the inner Flex
+              width={{base:'80%', md:'80%', lg:'40%'}}   // Set the width to be 100% of the inner Flex
               objectFit={'cover'}  // This will ensure the image covers the area without distortion
               src={'fig-1-icml.png'}
               alt={'problem'}
